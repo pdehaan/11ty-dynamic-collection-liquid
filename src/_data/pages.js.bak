@@ -1,0 +1,17 @@
+module.exports = [
+  {
+    title: "Page One",
+    tags: ["one.a", "one.b", "pages", "animal"],
+    date: "2022-04-24",
+  },
+  {
+    title: "Page Two",
+    tags: ["two.a", "two.b", "pages", "mineral"],
+    date: "2020-09-19",
+  },
+  {
+    title: "Page Three",
+    tags: ["three.a", "three.b", "pages", "animal", "vegetable"],
+    date: "2021-11-30",
+  },
+];

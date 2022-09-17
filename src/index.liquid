@@ -1,0 +1,39 @@
+---
+eleventyExcludeFromCollections: true
+---
+
+{%- assign dynamicAll = collections.dynamic | getAll -%}
+<section data-get-all data-size="{{ dynamicAll | size }}">
+  <h1>`collections.dynamic | getAll`</h1>
+  {% render "preview.liquid" for dynamicAll as post %}
+</section>
+
+{%- assign dynamicAllSorted = collections.dynamic | getAllSorted -%}
+<section data-get-all-sorted data-size="{{ dynamicAllSorted | size }}">
+  <h1>`collections.dynamic | getAllSorted`</h1>
+  {% render "preview.liquid" for dynamicAllSorted as post %}
+</section>
+
+{%- assign dynamicFilteredByTag = collections.dynamic | getFilteredByTag: "about" -%}
+<section data-get-filtered-by-tag="about" data-size="{{ dynamicFilteredByTag | size }}">
+  <h1>`collections.dynamic | getFilteredByTag("...")`</h1>
+  {% render "preview.liquid" for dynamicFilteredByTag as post %}
+</section>
+
+{%- assign dynamicFilteredByTags = collections.dynamic | getFilteredByTags: "pages", "home" -%}
+<section data-get-filtered-by-tags="home,pages" data-size="{{ dynamicFilteredByTags | size }}">
+  <h1>`collections.dynamic | getFilteredByTags([...])`</h1>
+  {% render "preview.liquid" for dynamicFilteredByTags as post %}
+</section>
+
+{%- assign dynamicFilteredByGlob = collections.dynamic | getFilteredByGlob: "src/static/*.liquid" -%}
+<section data-get-filtered-by-glob="src/static/*.liquid" data-size="{{ dynamicFilteredByGlob | size }}">
+  <h1>`collections.dynamic | getFilteredByGlob("...")`</h1>
+  {% render "preview.liquid" for dynamicFilteredByGlob as post %}
+</section>
+
+{%- assign dynamicFilteredByGlobArr = collections.dynamic | getFilteredByGlob: "src/static/*.liquid", "src/contact/*.liquid" -%}
+<section data-get-filtered-by-glob="src/static/*.liquid,src/contact/*.liquid" data-size="{{ dynamicFilteredByGlobs | size }}">
+  <h1>`collections.dynamic | getFilteredByGlob([...])`</h1>
+  {% render "preview.liquid" for dynamicFilteredByGlobArr as post %}
+</section>

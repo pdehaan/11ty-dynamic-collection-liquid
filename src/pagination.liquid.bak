@@ -1,0 +1,28 @@
+---js
+{
+  pagination: {
+    data: "pages",
+    size: 1,
+    alias: "p",
+    addAllPagesToCollections: true
+  },
+  eleventyComputed: {
+    date(data) {
+      data.page.date = new Date(data.p.date);
+      return data.p.date;
+    },
+    permalink(data) {
+      return `pages/${this.slugify(data.p.title)}/`;
+    },
+    tags(data) {
+      return data.p.tags || [];
+    },
+    title(data) {
+      return data.p.title;
+    },
+  },
+}
+---
+
+title={{ p.title }}
+tags={{ p.tags | json }}

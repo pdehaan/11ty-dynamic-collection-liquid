@@ -1,0 +1,99 @@
+<section data-get-all data-size="3">
+  <h1>`collections.dynamic | getAll`</h1>
+  <article>
+    <p>title="Home"</p>
+    <p>tags=["pages","home"]</p>
+    <p>date="2022-06-26T00:00:00.000Z"</p>
+    <p>url=/static/home/</p>
+  </article>
+  <article>
+    <p>title="About"</p>
+    <p>tags=["pages","about"]</p>
+    <p>date="2022-02-22T00:00:00.000Z"</p>
+    <p>url=/static/about/</p>
+  </article>
+  <article>
+    <p>title="Contact"</p>
+    <p>tags=["contact"]</p>
+    <p>date="2022-04-14T00:00:00.000Z"</p>
+    <p>url=/contact/</p>
+  </article>
+</section>
+<section data-get-all-sorted data-size="3">
+  <h1>`collections.dynamic | getAllSorted`</h1>
+  <article>
+    <p>title="About"</p>
+    <p>tags=["pages","about"]</p>
+    <p>date="2022-02-22T00:00:00.000Z"</p>
+    <p>url=/static/about/</p>
+  </article>
+  <article>
+    <p>title="Contact"</p>
+    <p>tags=["contact"]</p>
+    <p>date="2022-04-14T00:00:00.000Z"</p>
+    <p>url=/contact/</p>
+  </article>
+  <article>
+    <p>title="Home"</p>
+    <p>tags=["pages","home"]</p>
+    <p>date="2022-06-26T00:00:00.000Z"</p>
+    <p>url=/static/home/</p>
+  </article>
+</section>
+<section data-get-filtered-by-tag="about" data-size="1">
+  <h1>`collections.dynamic | getFilteredByTag("...")`</h1>
+  <article>
+    <p>title="About"</p>
+    <p>tags=["pages","about"]</p>
+    <p>date="2022-02-22T00:00:00.000Z"</p>
+    <p>url=/static/about/</p>
+  </article>
+</section>
+<section data-get-filtered-by-tags="home,pages" data-size="1">
+  <h1>`collections.dynamic | getFilteredByTags([...])`</h1>
+  <article>
+    <p>title="Home"</p>
+    <p>tags=["pages","home"]</p>
+    <p>date="2022-06-26T00:00:00.000Z"</p>
+    <p>url=/static/home/</p>
+  </article>
+</section>
+<section data-get-filtered-by-glob="src/static/*.liquid" data-size="2">
+  <h1>`collections.dynamic | getFilteredByGlob("...")`</h1>
+  <article>
+    <p>title="About"</p>
+    <p>tags=["pages","about"]</p>
+    <p>date="2022-02-22T00:00:00.000Z"</p>
+    <p>url=/static/about/</p>
+  </article>
+  <article>
+    <p>title="Home"</p>
+    <p>tags=["pages","home"]</p>
+    <p>date="2022-06-26T00:00:00.000Z"</p>
+    <p>url=/static/home/</p>
+  </article>
+</section>
+<section
+  data-get-filtered-by-glob="src/static/*.liquid,src/contact/*.liquid"
+  data-size="0"
+>
+  <h1>`collections.dynamic | getFilteredByGlob([...])`</h1>
+  <article>
+    <p>title="About"</p>
+    <p>tags=["pages","about"]</p>
+    <p>date="2022-02-22T00:00:00.000Z"</p>
+    <p>url=/static/about/</p>
+  </article>
+  <article>
+    <p>title="Contact"</p>
+    <p>tags=["contact"]</p>
+    <p>date="2022-04-14T00:00:00.000Z"</p>
+    <p>url=/contact/</p>
+  </article>
+  <article>
+    <p>title="Home"</p>
+    <p>tags=["pages","home"]</p>
+    <p>date="2022-06-26T00:00:00.000Z"</p>
+    <p>url=/static/home/</p>
+  </article>
+</section>
